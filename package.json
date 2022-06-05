@@ -4,7 +4,7 @@
   "description": "video chat app builit using nodeJs, socket.io ...",
   "main": "server.js",
   "scripts": {
-    "test": "video-chat-app"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "nodemon": "^2.0.16",
     "socket.io": "^4.5.1"
