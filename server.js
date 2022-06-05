@@ -5,6 +5,11 @@ const dotenv = require('dotenv').config({path: './config/.env'});
 const app = express();
 const server = require('http').Server(app);
 const ejs = require('ejs');
+const io = require("socket.io")(server);
+const { ExpressPeerServer } = require("peer");
+const peerServer = ExpressPeerServer(server, {
+    debug: true,
+});
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
