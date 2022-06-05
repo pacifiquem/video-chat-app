@@ -27,6 +27,26 @@ body {
     position: relative;
 }
 
+#video-grid {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#video-grid video {
+    box-shadow: 1px 1px 1px 1px rgba(70, 69, 69, 0.1);
+}
+#first-video {
+    width: 60% !important;
+}
+#first-video, #second-video {
+    border: 1px black solid;
+    width: 40%;
+    height: 100%;
+}
+
 .actions {
     position: absolute;
     bottom: 0;

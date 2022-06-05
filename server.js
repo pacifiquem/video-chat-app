@@ -1,4 +1,5 @@
 const express = require('express');
+const { v4: uuidv4 } = require("uuid");
 const colors = require('colors');
 const dotenv = require('dotenv').config({path: './config/.env'});
 const app = express();
@@ -6,10 +7,15 @@ const server = require('http').Server(app);
 const ejs = require('ejs');
 
 app.use(express.static('public'));
-app.set('view engine', ejs);
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('room.ejs');
+   res.redirect(`/${uuidv4()}`);
+});
+
+app.get("/:room", (req, res) => {
+
+    res.render('room', { roomId: req.param.room });
 });
 
 server.listen(process.env.PORT, () => {
