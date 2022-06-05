@@ -1,0 +1,29 @@
+{
+  "name": "video-chat-app",
+  "version": "1.0.0",
+  "description": "video chat app builit using nodeJs, socket.io ...",
+  "main": "server.js",
+  "scripts": {
+    "test": "video-chat-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pacy001/video-chat-app.git"
+  },
+  "keywords": [
+    "video-chat-app"
+  ],
+  "author": "Pacifique Murangwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pacy001/video-chat-app/issues"
+  },
+  "homepage": "https://github.com/pacy001/video-chat-app#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "socket.io": "^4.5.1"
+  }
+}
