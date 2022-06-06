@@ -18,6 +18,10 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 
+io.on('connection', (socket) => {
+    console.log(socket);
+});
+
 app.get('/', (req, res) => {
    res.redirect(`/${uuidv4()}`);
 });
