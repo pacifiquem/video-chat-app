@@ -1,97 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+:root {
+  --main-darklg: #1d2635;
+ --main-dark: #161d29;
+ --primary-color: #2f80ec;
+ --main-light: #eeeeee;
+ --font-family: "Poppins", sans-serif;
+}
+
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
-
-body {
-    padding: .3em;
-    background-color: black;
-}
-
 .header {
-    height: 8vh;
-    background-color: rgb(62, 62, 62);;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 8vh;
+width: 100%;
+background-color: var(--main-darklg);
 }
-.container {
-    display: flex;
-    height: 90vh;
-    width: 100%;
-    background-color: red;
+.logo > h3 {
+color: var(main-light);
 }
-
-.first-main {
-    width: 73%;
-    height: 100%;
-    background-color: black;
-    position: relative;
+.main {
+overflow: hidden;
+height: 92vh;
+display: flex;
 }
-
+.main__left {
+flex: 0.7;
+display: flex;
+flex-direction: column;
+}
+.videos__group {
+flex-grow: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+background-color: var(--main-dark);
+}
+video {
+height: 300px;
+border-radius: 1rem;
+margin: 0.5rem;
+width: 400px;
+object-fit: cover;
+transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+}
+.options {
+padding: 1rem;
+display: flex;
+background-color: var( --main-darklg);
+}
+.options__left {
+display: flex;
+}
+.options__right {
+margin-left: auto;
+}
+.options__button {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--primary-color);
+height: 50px;
+border-radius: 5px;
+color: var(--main-light);
+font-size: 1.2rem;
+width: 50px;
+margin: 0 0.5rem;
+}
+.background__red {
+background-color: #f6484a;
+}
+.main__right {
+flex: 0.3;
+background-color: #242f41;
+}
+.main__chat_window {
+flex-grow: 1;
+}
+.main__message_container {
+padding: 1rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.main__message_container > input {
+height: 50px;
+flex: 1;
+border-radius: 5px;
+padding-left: 20px;
+border: none;
+}
 #video-grid {
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#video-grid video {
-    box-shadow: 1px 1px 1px 1px rgba(70, 69, 69, 0.1);
-}
-#first-video {
-    width: 60% !important;
-}
-#first-video, #second-video {
-    border: 1px black solid;
-    width: 40%;
-    height: 100%;
-}
-
-.actions {
-    position: absolute;
-    bottom: 0;
-    height: 5vh;
-    width: 100%;
-    background-color: grey;
-}
-
-.actions button {
-    height: 5vh;
-    width: 3vw;
-}
-.actions button:nth-child(3) {
-    position: absolute;
-    right: 3em;
-}
-
-.second-main {
-    width: 27%;
-    height: 100%;
-    background-color: rgb(95, 95, 95);
-    position: relative;
-}
-
-.messaging {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 5vh;
-    background-color: grey;
-}
-
-.messaging input {
-    width: 70%;
-    height: 5vh;
-    padding: 10px;
-    border: solid black 1px;
-    margin-left: 1.5em;
-
-}
-.messaging input, .messaging button {
-    border-radius: 3px;
-    font-size: 1.35em;
-}
-.messaging button {
-    width: 15%;
-    height: 5vh;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
 }
