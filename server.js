@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
+const dotnev = require('dotenv').config({path: './config/.env'})
 const server = require("http").Server(app);
 const { v4: uuidv4 } = require("uuid");
-const dotenv = require("dotenv").config({path: './config/.env'});
 app.set("view engine", "ejs");
 const io = require("socket.io")(server);
 const { ExpressPeerServer } = require("peer");
@@ -23,6 +23,6 @@ socket.join(roomId);
 socket.to(roomId).broadcast.emit("user-connected", userId);
 });
 });
-server.listen(process.env.PORT, () => {
-    console.log(`server is at ${process.env.PORT}`)
-});
+server.listen((process.env.port, ()=>{
+    console.log(`server is at ${process.env.port}`);
+}));
